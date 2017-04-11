@@ -4,9 +4,12 @@
 $(function() {
 
   // Select the element with id `sandbox` and append a `div` element to it. Make sure to store the div in a JavaScript varaible
-  var selectedDiv = d3.select('#sandbox').append('div');
+  var selectedDiv = d3.select('#sandbox')
+                      .append('div')
+                      .attr('id', 'my-div');
   // Create a variable `mySvg` by appending an `svg` element to your newly created `div`
   var mySvg = selectedDiv.append('svg');
+  // var mySvg = d3.select('#sandbox').append('svg'); // this works too
   // Set both the width and height attributes of your `svg` to 300
   mySvg.attr('width', 300)
        .attr('height', 300)
